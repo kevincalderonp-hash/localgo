@@ -1,0 +1,74 @@
+/* Tiendas Page Styles */
+.tiendas {
+  min-height: 100vh;
+  background-color: var(--background-color);
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tienda-card {
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tienda-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tienda-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tienda-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tienda-icon {
+  font-size: 1.5rem;
+}
+
+.tienda-content p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.tienda-btn {
+  align-self: flex-start;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .tienda-title {
+    font-size: 1.3rem;
+  }
+}
