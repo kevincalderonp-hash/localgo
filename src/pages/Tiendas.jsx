@@ -15,8 +15,7 @@ function Tiendas() {
         <div className="grid grid-2">
           <div className="card tienda-card">
             <img
-              src="https://source.unsplash.com/random?fastfood"
-              alt="Comida Rápida"
+              src="logoComidaRapida.png"
               className="tienda-image"
             />
             <div className="tienda-content">
@@ -32,7 +31,7 @@ function Tiendas() {
 
           <div className="card tienda-card">
             <img
-              src="https://source.unsplash.com/random?supermarket"
+              src="logomarket.png"
               alt="Supermercado"
               className="tienda-image"
             />
