@@ -22,6 +22,9 @@ function Navbar() {
             <span className="nav-icon">🛒</span> Carrito
             {cart.length > 0 && <span className="cart-badge">{cart.length}</span>}
           </Link>
+          <Link to="/Login" className="nav-link">
+            <span className="nav-icon">👤</span> Iniciar sesión
+          </Link>
         </div>
       </div>
     </nav>

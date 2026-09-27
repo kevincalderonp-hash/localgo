@@ -1,0 +1,83 @@
+/* Contenedor principal del login */
+.login-container {
+  max-width: 400px; /* ancho más amplio */
+  margin: 80px auto; /* centrado vertical y horizontal */
+  padding: 30px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1f1c2c, #928dab); /* degradado futurista */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* sombra elegante */
+  font-family: "Segoe UI", sans-serif;
+  color: #fff; /* texto blanco */
+  animation: fadeIn 1s ease-in-out; /* animación al aparecer */
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Título */
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #00e0ff; /* azul neón */
+}
+
+/* Etiquetas */
+.login-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+/* Campos de entrada */
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.login-container input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 8px #00e0ff;
+}
+
+/* Botón */
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #00e0ff, #0077ff);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.login-container button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #0077ff, #00e0ff);
+}
+
+/* Mensajes de error */
+.login-container p {
+  color: #ff4d4d;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  text-align: center;
+}
