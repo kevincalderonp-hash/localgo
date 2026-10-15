@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import "../styles/login.css";
+import { Link } from "react-router-dom";
 
 
 
@@ -70,7 +71,7 @@ export default function Login() {
       </form>
       
       <div className="registrar"></div>
-        <p>¿No tienes una cuenta? <a href="/registrar">Regístrate aquí</a></p>
+        <p>¿No tienes una cuenta? <Link to="/registrar">Regístrate aquí</Link></p>
 
       </div>
    

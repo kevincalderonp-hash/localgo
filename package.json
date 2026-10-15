@@ -13,17 +13,22 @@
     "@testing-library/user-event": "^13.5.0",
     "bcrypt": "^6.0.0",
     "cors": "^2.8.6",
-    "express": "^5.2.1",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "leaflet": "^1.9.4",
     "mysql": "^2.18.1",
     "mysql2": "^3.22.3",
+    "pg": "^8.23.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "react-leaflet": "^5.0.0",
     "react-router-dom": "^7.14.0",
-   "react-scripts": "5.0.1",
+    "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
+    "server": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -45,5 +50,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevincalderonp-hash/localgo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevincalderonp-hash/localgo/issues"
+  },
+  "homepage": "https://kevincalderonp-hash.github.io/localgo"
 }

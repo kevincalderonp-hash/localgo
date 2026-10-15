@@ -1,14 +1,16 @@
 /* Contenedor principal del login */
 .login-container {
-  max-width: 400px; /* ancho más amplio */
-  margin: 80px auto; /* centrado vertical y horizontal */
+  max-width: 420px;
+  margin: 80px auto;
   padding: 30px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #1f1c2c, #928dab); /* degradado futurista */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* sombra elegante */
+  border-radius: 15px;
+  background: rgba(31, 28, 44, 0.85); /* glassmorphism */
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 224, 255, 0.3);
   font-family: "Segoe UI", sans-serif;
-  color: #fff; /* texto blanco */
-  animation: fadeIn 1s ease-in-out; /* animación al aparecer */
+  color: #fff;
+  animation: fadeIn 1s ease-in-out;
+  border: 1px solid rgba(0, 224, 255, 0.2);
 }
 
 /* Animación de entrada */
@@ -25,6 +27,7 @@
   font-weight: bold;
   letter-spacing: 2px;
   color: #00e0ff; /* azul neón */
+  text-shadow: 0 0 10px #00e0ff;
 }
 
 /* Etiquetas */
@@ -41,8 +44,8 @@
   padding: 12px;
   margin-bottom: 20px;
   border: none;
-  border-radius: 6px;
-  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.08);
   color: #fff;
   font-size: 16px;
   transition: all 0.3s ease;
@@ -50,8 +53,9 @@
 
 .login-container input:focus {
   outline: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 8px #00e0ff;
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 12px #00e0ff;
+  border: 1px solid #00e0ff;
 }
 
 /* Botón */
@@ -60,17 +64,17 @@
   padding: 12px;
   background: linear-gradient(135deg, #00e0ff, #0077ff);
   border: none;
-  border-radius: 6px;
-  color: #fff;
+  border-radius: 8px;
+  color: #0f2027;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
-  transition: transform 0.2s ease, background 0.3s ease;
+  transition: transform 0.25s ease, box-shadow 0.3s ease;
 }
 
 .login-container button:hover {
-  transform: scale(1.05);
-  background: linear-gradient(135deg, #0077ff, #00e0ff);
+  transform: scale(1.07);
+  box-shadow: 0 0 20px #00e0ff;
 }
 
 /* Mensajes de error */
@@ -80,4 +84,15 @@
   margin-top: -10px;
   margin-bottom: 15px;
   text-align: center;
+  text-shadow: 0 0 5px #ff4d4d;
+  display: inline-block;
+  margin-bottom: 10px;
 }
+
+/* .login-container .regist{
+  display: inline-block;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+} */

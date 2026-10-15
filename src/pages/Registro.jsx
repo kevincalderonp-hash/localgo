@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../styles/registro.css"; // estilos separados
+import { useNavigate } from "react-router-dom"; // Hook para redireccionar a otras páginas
 
 export default function Register() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [nombre, setNombre] = useState("");
@@ -18,7 +20,7 @@ export default function Register() {
     }
 
     try {
-      const response = await fetch("http://localhost:3001/register", {
+      const response = await fetch("http://localhost:4000/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({email, password, nombre }),
@@ -39,6 +41,9 @@ export default function Register() {
 
   return (
     <div className="register-container">
+      
+      <button className="boton-regreso" onClick={() => navigate("/Login")}>Ir a Login</button>
+      
       <h2>Registro</h2>
       <form onSubmit={handleRegister}>
         <div>
@@ -69,8 +74,8 @@ export default function Register() {
           />
         </div>
         {error && <p>{error}</p>}
-        <button type="submit">Registrar</button>
+        <button className="boton-registro" type="submit"> Registrate </button>
       </form>
     </div>
   );
-}
+};

@@ -11,7 +11,7 @@ import EmpleadoUser from "../pages/EmpleadoUser";
 
 function AppRouter() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
     {/* Definimos las rutas de la aplicación */ }
       <Routes>
         <Route path="/" element={<Home />} /> 
@@ -22,6 +22,9 @@ function AppRouter() {
         <Route path="/Tiendas/SuperMarket" element={<SuperMarket />} />
         <Route path="/registrar" element={<Register />} />
         <Route path="/EmpleadoUser" element={<EmpleadoUser />} />
+
+        <Route path="*" element={<Home />} />
+
       </Routes>
     </BrowserRouter>
   );

@@ -1,28 +1,44 @@
 /* Navbar Styles */
 .navbar {
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(270deg, #ff6ec4, #7873f5);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
   color: white;
-  box-shadow: var(--shadow);
+  box-shadow: 0 0 15px rgba(0,240,255,0.5);
   position: sticky;
   top: 0;
   z-index: 100;
+  padding: 0.5rem 0;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .navbar-container {
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  width: 90%;
 }
 
 .navbar-brand .brand-link {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  color: white;
+  color: #00f0ff;
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  text-shadow: 0 0 10px #00f0ff;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand .brand-link:hover {
+  transform: scale(1.1);
 }
 
 .navbar-menu {
@@ -39,12 +55,14 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  border-radius: var(--border-radius);
-  transition: background-color 0.3s ease;
+  border-radius: 30px;
+  transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0,240,255,0.2);
+  box-shadow: 0 0 10px #00f0ff;
+  color: #00f0ff;
 }
 
 .nav-icon {
@@ -52,14 +70,15 @@
 }
 
 .cart-badge {
-  background-color: var(--secondary-color);
-  color: white;
+  background-color: #00f0ff;
+  color: black;
   border-radius: 50%;
-  padding: 0.2rem 0.5rem;
+  padding: 0.3rem 0.6rem;
   font-size: 0.8rem;
   font-weight: 600;
   min-width: 1.5rem;
   text-align: center;
+  box-shadow: 0 0 10px #00f0ff;
 }
 
 /* Responsive */
@@ -71,5 +90,6 @@
 
   .navbar-menu {
     gap: 1rem;
+    flex-direction: column;
   }
 }

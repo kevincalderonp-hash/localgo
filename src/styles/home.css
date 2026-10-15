@@ -1,21 +1,32 @@
 /* Home Page Styles */
 .home {
   min-height: 100vh;
+  background: #0a0a0a;
+  color: white;
+  font-family: 'Orbiton', sans-serif;
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  background: linear-gradient(270deg, #fb63be, #5b56fe);
+  /* background-size: 400% 400%;  */
+  animation: gradientAnimation 8s ease infinite;
   color: white;
   padding: 4rem 0;
-  text-align: center;
+  /* text-align: center; */
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .hero-title {
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff, 0 0 30px;
 }
 
 .hero-subtitle {
@@ -25,14 +36,27 @@
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
+  color: #e0e0e0;
 }
 
+/* Botón Hero */
 .hero-btn {
   font-size: 1.1rem;
   padding: 1rem 2rem;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  background: transparent;
+  border: 2px solid #00f0ff;
+  color: #00f0ff;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: #00f0ff;
+  color: black;
+  box-shadow: 0 0 20px #00f0ff;
 }
 
 .btn-icon {
@@ -41,36 +65,49 @@
 
 /* Features Section */
 .features {
-  background-color: var(--background-color);
+  background: #121212;
+  padding: 4rem 2rem;
 }
 
 .section-title {
   font-size: 2.5rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: #00f0ff;
   margin-bottom: 3rem;
+  text-shadow: 0 0 15px #00f0ff;
 }
 
 .feature-card {
   padding: 2rem;
   text-align: center;
   height: 100%;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 20px rgba(0,240,255,0.5);
 }
 
 .feature-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: #00f0ff;
 }
 
 .feature-card h3 {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--text-primary);
+  color: #ffffff;
 }
 
 .feature-card p {
-  color: var(--text-secondary);
+  color: #cfcfcf;
   line-height: 1.6;
 }
 
@@ -95,18 +132,4 @@
   .feature-card {
     padding: 1.5rem;
   }
-}
-  
-
-  /*background-color: black;
-  color: white;
-  border: none;
-  border-radius: 10px;
-
-  cursor: pointer;*/
-
-
-/* Hover botón */
-.card button:hover {
-  background-color: #333;
 }
