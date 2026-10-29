@@ -29,7 +29,7 @@ app.post("/register", async (req, res) => {
       });
     } else {
       // Postgres usa $1, $2, $3
-      await db.query("INSERT INTO usuarios (email, password, nombre) VALUES ($1, $2, $3)", [email, hashedPassword, nombre]);
+      await db.query("INSERT INTO usuario (email, password, nombre) VALUES ($1, $2, $3)", [email, hashedPassword, nombre]);
       res.json({ success: true, message: "Usuario registrado correctamente ✅" });
     }
  } catch (error) {
@@ -61,7 +61,7 @@ app.post("/login", async (req, res) => {
       });
     } else {
       // Postgres
-      const result = await db.query("SELECT * FROM usuarios WHERE email = $1", [email]);
+      const result = await db.query("SELECT * FROM usuario WHERE email = $1", [email]);
       if (result.rows.length === 0) return res.json({ success: false, message: "Usuario no encontrado ❌" });
 
       const user = result.rows[0];

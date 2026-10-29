@@ -23,7 +23,7 @@ export default function Login() {
     }
 
     try {
-      const response = await fetch("http://localhost:3001/login", {
+      const response = await fetch("http://localhost:4000/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -34,7 +34,7 @@ export default function Login() {
       if (data.success) {
         alert(`Login exitoso ✅ ${data.user.nombre}`);
         setError("");
-        navigate("/EmpleadoUser"); // Redirigir al dashboard después del login exitoso
+        navigate("/empleado-user"); // Redirigir al dashboard después del login exitoso
       } else {
         setError(data.message);
       }

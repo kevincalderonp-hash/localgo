@@ -42,7 +42,7 @@ export default function Register() {
   return (
     <div className="register-container">
       
-      <button className="boton-regreso" onClick={() => navigate("/Login")}>Ir a Login</button>
+      <button className="boton-regreso" onClick={() => navigate("/login")}>Ir a Login</button>
       
       <h2>Registro</h2>
       <form onSubmit={handleRegister}>

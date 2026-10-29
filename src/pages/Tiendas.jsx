@@ -41,7 +41,7 @@ function Tiendas() {
                 <span className="tienda-icon">🍔</span> Comida Rápida
               </h2>
               <p>Hamburguesas, pizzas, tacos y más. ¡Deliciosos y rápidos!</p>
-              <Link to="/Tiendas/FastFood" className="btn btn-primary tienda-btn">
+              <Link to="/tiendas/fast-food" className="btn btn-primary tienda-btn">
                 Ver Opciones
               </Link>
             </div>
@@ -58,7 +58,7 @@ function Tiendas() {
                 <span className="tienda-icon">🛒</span> Supermercado
               </h2>
               <p>Productos frescos, bebidas y artículos del hogar.</p>
-              <Link to="/Tiendas/SuperMarket" className="btn btn-primary tienda-btn">
+              <Link to="/tiendas/super-market" className="btn btn-primary tienda-btn">
                 Ver Productos
               </Link>
             </div>

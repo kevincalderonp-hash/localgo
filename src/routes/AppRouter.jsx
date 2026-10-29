@@ -14,14 +14,14 @@ function AppRouter() {
     <BrowserRouter basename={process.env.PUBLIC_URL}>
     {/* Definimos las rutas de la aplicación */ }
       <Routes>
-        <Route path="/" element={<Home />} /> 
-        <Route path="/Login" element={<Login />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/Tiendas" element={<Tiendas />} />
-        <Route path="/Tiendas/FastFood" element={<FastFood />} />
-        <Route path="/Tiendas/SuperMarket" element={<SuperMarket />} />
+        <Route path="/tiendas" element={<Tiendas />} />
+        <Route path="/tiendas/fast-food" element={<FastFood />} />
+        <Route path="/tiendas/super-market" element={<SuperMarket />} />
         <Route path="/registrar" element={<Register />} />
-        <Route path="/EmpleadoUser" element={<EmpleadoUser />} />
+        <Route path="/empleado-user" element={<EmpleadoUser />} />
 
         <Route path="*" element={<Home />} />
 
